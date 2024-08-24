@@ -16,10 +16,25 @@ export interface OperatorAddone {
 }
 
 export enum AddonFieldName {
-    IP = "IP", SMTP = "SMTP"
+    SMTP = "SMTP",
+    JBOD = "JBOD",
+    SAS = "SAS",
+    API = "API",
+    TCP = "TCP",
+    DRAM = "DRAM",
+    COM = "COM",
+    IP = "IP",
+    HEX = "HEX",
+    RSS = "RSS",
+    IB = "IB",
+    HDD = "HDD",
+    TLS = "TLS",
+    RAM = "RAM",
+    FTP = "FTP",
+    AGP = "AGP"
 }
 
-interface CombinedData extends Operator {
+export interface CombinedData extends Operator {
     additionalInfo: { [key in AddonFieldName]?: string };
 }
 

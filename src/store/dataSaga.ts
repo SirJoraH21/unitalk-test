@@ -1,5 +1,5 @@
 import { all, AllEffect, call, CallEffect, put, PutEffect, takeLatest } from 'redux-saga/effects';
-import { fetchDataStart, fetchDataSuccess, fetchDataFailure, Operator, OperatorAddone } from './dataSlice';
+import { fetchDataSuccess, fetchDataFailure, Operator, OperatorAddone } from './dataSlice';
 
 // Should be in .env file
 const API_TOKEN = '66a7f07b53c13f22a3d17fb1';
