@@ -27,16 +27,13 @@ function* fetchDataSaga(): Generator<
     [Operator[], OperatorAddone[]]
 > {
     try {
-        console.log('Saga: Fetching data...');
         // Fetch both operators and operator add-ons in parallel
         const [operators, operatorAddones] = yield all([
             call(fetchOperators),
             call(fetchOperatorAddones)
         ]);
-        console.log('Saga: Data fetched successfully', operators, operatorAddones);
         yield put(fetchDataSuccess({ operators, operatorAddones }));
     } catch (error: any) {
-        console.error('Saga: Data fetch failed', error);
         yield put(fetchDataFailure(error.message));
     }
 }
